@@ -1,0 +1,5 @@
+name: 'MyFutureInvest Entity'
+type: module
+description: 'Custom entities for myfutureinvest website.'
+package: MFI
+core_version_requirement: ^10

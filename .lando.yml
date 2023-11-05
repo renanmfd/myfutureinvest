@@ -1,0 +1,30 @@
+name: myfutureinvest
+recipe: pantheon
+
+config:
+  framework: drupal
+  id: 36da9309-9c82-4e9a-92c0-e68a8255b180
+  site: myfutureinvest
+  xdebug: true
+  index: true
+  edge: true
+  cache: true
+  composer_version: "2.2.12"
+  drupal: true
+
+proxy:
+  appserver_nginx:
+    - hostname: myfutureinvest.lndo.site
+      port: 80
+
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  drupal:
+    service: appserver_nginx
+
+services:
+  node:
+    type: node:14
